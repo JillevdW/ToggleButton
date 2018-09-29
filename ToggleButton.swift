@@ -16,10 +16,10 @@ class ToggleButton: UIButton {
     }
     
     /// The image that will be shown when the button is toggled off.
-    var offImage: UIImage?
+    @IBInspectable var offImage: UIImage?
     
     /// The image that will be shown when the button is toggled on.
-    var onImage: UIImage?
+    @IBInspectable var onImage: UIImage?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

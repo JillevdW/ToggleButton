@@ -4,7 +4,7 @@ ToggleButton is a subclass of UIButton that takes care of a very simple problem:
 
 While a UISwitch could be used for this, buttons that act like a toggle are often used in apps, as shown below in the native Clock app.
 
-![Toggleable buttons being used in the native Clock app.](/Users/jillevanderweerd/Desktop/ToggleButton/RepoAssets/bedtime.gif)
+![Toggleable buttons being used in the native Clock app.](https://github.com/JillevdW/ToggleButton/blob/master/RepoAssets/bedtime.gif)
 
 
 
@@ -30,16 +30,7 @@ There are multiple ways to start using a ToggleButton: you can either create it 
 
 If you create the button through the Storyboard, keep in mind that you **need to set the `Type` property in the Attributes Inspector to `Custom`**.
 
-Now you need to set the images for the button, and probably an action. Ctrl-drag an outlet to you ViewController. Setting the images can be done like this:
-
-```swift
-@IBOutlet weak var button: ToggleButton! {
-    didSet {
-        button.offImage = UIImage(...)
-        button.onImage = UIImage(...)
-    }
-}
-```
+Now you need to set the images for the button. Since the images are both `@IBInspectable`, we can do this in the Attributes Inspector.
 
 Creating actions is the same as a regular UIButton, however, make sure you **set the `Type` property to `ToggleButton`** so your sender is of type `ToggleButton`. 
 
