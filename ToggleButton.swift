@@ -16,27 +16,35 @@ class ToggleButton: UIButton {
     }
     
     /// The image that will be shown when the button is toggled off.
-    @IBInspectable var offImage: UIImage?
+    @IBInspectable var offImage: UIImage? {
+        didSet {
+            if oldValue == nil {
+                setImage(offImage, for: .normal)
+            }
+        }
+    }
     
     /// The image that will be shown when the button is toggled on.
     @IBInspectable var onImage: UIImage?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commonInit()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        commonInit()
     }
     
     init(frame: CGRect, offImage: UIImage?, onImage: UIImage?) {
         super.init(frame: frame)
         self.onImage = onImage
         self.offImage = offImage
+        commonInit()
     }
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
+    func commonInit() {
         addTarget(self, action: #selector(toggle), for: .touchUpInside)
         setImageForState()
     }
