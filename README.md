@@ -26,7 +26,7 @@ Simply download the ToggleButton.swift file and put it in your project directory
 
 There are multiple ways to start using a ToggleButton: you can either create it through the Storyboard or you can create it programmatically. 
 
-####Storyboard
+#### Storyboard
 
 If you create the button through the Storyboard, keep in mind that you **need to set the `Type` property in the Attributes Inspector to `Custom`**.
 
@@ -34,7 +34,7 @@ Now you need to set the images for the button. Since the images are both `@IBIns
 
 Creating actions is the same as a regular UIButton, however, make sure you **set the `Type` property to `ToggleButton`** so your sender is of type `ToggleButton`. 
 
-####Programmatically
+#### Programmatically
 
 If you want to create the button programmatically, you can do so with one of these two initializers:
 
