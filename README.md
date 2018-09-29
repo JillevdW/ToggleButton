@@ -94,6 +94,14 @@ let state = button.isToggled
 - Xcode 9.0+ (not entirely sure)
 - Swift 3.0+ (but I did update to 4.0, not sure if that broke something)
 
+##Creations
+
+If you create something with this, please send me a gif so I can add it here to showcase some cool things you can do with it. What I used it for is a daypicker as shown in the native Clock app:
+
+![The daypicker I made.](https://github.com/JillevdW/ToggleButton/blob/master/RepoAssets/daypicker.gif)
+
+Right now I set it to be exclusive, meaning only one day can be selected at the same time. This could easily be changed to allow for multiple selections to be made.
+
 
 ## Author
 
